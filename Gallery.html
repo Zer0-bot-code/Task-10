@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="CSS\style.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <header>
+    <div class="container">
+      <h1 class="logo"></h1>
+
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="Gallery\bendera.webp" alt="Bendera UNIMAP" style="width: 323px"; height="100px">
+    </a>
+    <div class="desc">Unimap in process of establisihing Faculty of Science and Computing, with focus on Ai</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="Gallery\graduan.jpeg" alt="Graduan UNIMAP" style="width: 323px"; height="100px">
+    </a>
+    <div class="desc">Graduan Unimap perlu serlah kepakaran dalam pelbagai bidang: Raja Muda Perlis</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="Gallery\library.jpg" alt="Library UNIMAP" style="width: 323px"; height="100px">
+    </a>
+    <div class="desc">With plenty of seating capacity (800 at one time!), it houses private discussion rooms, dedicated learning pods and personal carrel, cozy leisure area, and many more.</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="Gallery\air.webp" alt="Bekalan Air" style="width: 323px"; height="100px">
+    </a>
+    <div class="desc">Dua minggu tiada bekalan air, pelajar UniMAP lancar mogok</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<footer class="mt-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>About Us</h5>
+        <p>Universiti Malaysia Perlis (UniMAP), dahulunya dikenali sebagai Kolej Universiti Kejuruteraan Utara Malaysia (KUKUM) telah diluluskan penubuhannya oleh Jemaah Menteri pada 25 Julai 2001. Pada 1 April 2002, Institusi Pengajian Tinggi Awam ke-17 ini mula beroperasi kampus sementara di Kubang Gajah, Arau, Perlis. Setelah lima tahun bertapak di bumi Perlis, universiti ini telah dijenamakan semula daripada KUKUM kepada UniMAP pada 1 Februari 2007.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.unimap.edu.my/index.php/en/" class="text-decoration-none text-white">Unimap Official</a></li>
+          <li><a href="https://fpk.unimap.edu.my/index.php#" class="text-decoration-none text-white">FPK Unimap Official</a></li>
+          <li><a href="https://online.mohe.gov.my/epanduan/maklumatAgensi/UR" class="text-decoration-none text-white">Unimap Information</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <a href="https://www.facebook.com/share/1Ad2mT2xf2/" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/zer0_41?igsh=NTY5ZjVsZTUzOWhu" class="fa fa-instagram" target="_blank"></a>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2025 UniMAP. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
